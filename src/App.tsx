@@ -1,9 +1,12 @@
-import "./App.css";
+import "./App.scss";
+import Hero from "./components/Hero";
+import Navbar from "./components/Navbar";
 
 function App() {
   return (
     <>
-      <h1>MJP Detail</h1>
+      <Navbar />
+      <Hero />
     </>
   );
 }

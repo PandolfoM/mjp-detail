@@ -1,0 +1,65 @@
+@use "../../variables.scss";
+
+.hero {
+  height: 75vh;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  align-items: center;
+  overflow: hidden;
+  min-height: 30rem;
+  flex-direction: column-reverse;
+
+  @media screen and (min-width: variables.$tablet) {
+    flex-direction: row;
+  }
+}
+
+.tagline {
+  font-size: clamp(2.5rem, -0.6471rem + 4.7059vw, 5rem);
+  font-weight: 900;
+  white-space: nowrap;
+  width: 100%;
+  text-align: center;
+
+  @media screen and (min-width: variables.$tablet) {
+    width: 60%;
+    text-align: left;
+  }
+
+  span {
+    color: var(--mantine-color-brand-4);
+  }
+}
+
+.image {
+  height: 100%;
+  width: 100%;
+  right: 0;
+  top: 0;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  display: flex;
+
+  @media screen and (min-width: variables.$tablet) {
+    width: 50%;
+  }
+
+  img {
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: cover;
+    position: absolute;
+  }
+
+  .gti {
+    max-width: 75%;
+    z-index: 5;
+  }
+
+  .ray {
+    padding: 1rem 0;
+    z-index: 1;
+  }
+}

@@ -1,0 +1,13 @@
+@use "variables";
+
+.page {
+  padding: 0 1rem;
+
+  @media screen and (min-width: variables.$mobile) {
+    padding: 0 2.5rem;
+  }
+
+  @media screen and (min-width: variables.$tablet) {
+    padding: 0 5rem;
+  }
+}
